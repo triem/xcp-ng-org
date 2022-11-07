@@ -27,18 +27,12 @@ Restarting XAPI won't affect any running VMs. However, all backup/export tasks w
 ### Modifications
 
 :::warning
-Those changes aren't officially supported, and will be also wiped after an ISO upgrade.
+These changes aren't officially supported, and may be wiped after an ISO upgrade.
 :::
 
 #### 24h task timeout
 
-Edit the `/etc/xapi.conf` file, and uncomment/change `pending_task_timeout` from:
-
-```ini
-# pending_task_timeout = 86400 # 1 day in seconds
-```
-
-To:
+Create/Edit the `/etc/xapi.conf.d/custom.conf` file, and add `pending_task_timeout`:
 
 ```ini
 pending_task_timeout = 172800
