@@ -399,6 +399,7 @@ Now you can create the SR where `server` is your mon ip.
 * For `serverpath` it would be good idea to use an empty folder from the CephFS instead of `/`.
 * You may specify `serverport` option if you are using any other port than 6789.
 * Do not use admin keyring for production, but make a separate key with only necessary privileges https://docs.ceph.com/en/latest/rados/operations/user-management/
+* If you receive a `Required parameter not found: host-uuid` error when adding CephFS to a server pool, add `shared=true` to your xe sr-create command string.
 :::
 
 ### MooseFS
