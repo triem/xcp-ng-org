@@ -398,6 +398,7 @@ Now you can create the SR where `server` is your mon ip.
 :::tip
 * For `serverpath` it would be good idea to use an empty folder from the CephFS instead of `/`.
 * You may specify `serverport` option if you are using any other port than 6789.
+* You may specify multiple servers, ex: `device-config:server=172.16.10.10,172.16.10.11`.
 * Do not use admin keyring for production, but make a separate key with only necessary privileges https://docs.ceph.com/en/latest/rados/operations/user-management/
 :::
 
